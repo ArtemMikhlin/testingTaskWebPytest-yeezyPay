@@ -1,0 +1,72 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "tests.regression_tests",
+    "children" : [ {
+      "name" : "payout_negative_test",
+      "children" : [ {
+        "name" : "test_payout_with_invalid_csv_file_data[4111111111111111-0]",
+        "uid" : "891aaa9c1b007d47",
+        "parentUid" : "7c27e1f94a06c058bb1be50e81d2bb81",
+        "status" : "passed",
+        "time" : {
+          "start" : 1656341364294,
+          "stop" : 1656341366853,
+          "duration" : 2559
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "0", "4111111111111111" ]
+      }, {
+        "name" : "test_payout_with_invalid_csv_file_data[0-100]",
+        "uid" : "73275c2788304392",
+        "parentUid" : "7c27e1f94a06c058bb1be50e81d2bb81",
+        "status" : "passed",
+        "time" : {
+          "start" : 1656341372281,
+          "stop" : 1656341374877,
+          "duration" : 2596
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "100", "0" ]
+      } ],
+      "uid" : "7c27e1f94a06c058bb1be50e81d2bb81"
+    } ],
+    "uid" : "0da612e6ba152b956e84f543fa7a565b"
+  }, {
+    "name" : "tests.smoke_tests",
+    "children" : [ {
+      "name" : "payout_test",
+      "children" : [ {
+        "name" : "test_payout_with_csv_file",
+        "uid" : "22335923d74cf50c",
+        "parentUid" : "d648a0b0a1e6761093624111ab17a812",
+        "status" : "failed",
+        "time" : {
+          "start" : 1656341396802,
+          "stop" : 1656341419464,
+          "duration" : 22662
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 1,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "d648a0b0a1e6761093624111ab17a812"
+    } ],
+    "uid" : "faef8802807bf748a8af59addce6ed71"
+  } ]
+}

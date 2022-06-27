@@ -1,0 +1,81 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "Mikhlin-nb",
+    "children" : [ {
+      "name" : "8604-MainThread",
+      "children" : [ {
+        "name" : "test_payout_with_csv_file",
+        "uid" : "14e620cb13dc1a38",
+        "parentUid" : "0acf2cd16ae5deeede6378438957d546",
+        "status" : "failed",
+        "time" : {
+          "start" : 1656341379771,
+          "stop" : 1656341391610,
+          "duration" : 11839
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_payout_with_invalid_csv_file_data[4111111111111111-0]",
+        "uid" : "891aaa9c1b007d47",
+        "parentUid" : "0acf2cd16ae5deeede6378438957d546",
+        "status" : "passed",
+        "time" : {
+          "start" : 1656341364294,
+          "stop" : 1656341366853,
+          "duration" : 2559
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "0", "4111111111111111" ]
+      }, {
+        "name" : "test_payout_with_invalid_csv_file_data[0-100]",
+        "uid" : "73275c2788304392",
+        "parentUid" : "0acf2cd16ae5deeede6378438957d546",
+        "status" : "passed",
+        "time" : {
+          "start" : 1656341372281,
+          "stop" : 1656341374877,
+          "duration" : 2596
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "100", "0" ]
+      }, {
+        "name" : "test_payout_with_csv_file",
+        "uid" : "22335923d74cf50c",
+        "parentUid" : "0acf2cd16ae5deeede6378438957d546",
+        "status" : "failed",
+        "time" : {
+          "start" : 1656341396802,
+          "stop" : 1656341419464,
+          "duration" : 22662
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 1,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "0acf2cd16ae5deeede6378438957d546"
+    } ],
+    "uid" : "f8ae8c20566295682575b9f37d5d2177"
+  } ]
+}

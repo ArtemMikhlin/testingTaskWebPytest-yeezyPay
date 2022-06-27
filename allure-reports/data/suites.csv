@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Mon Jun 27 17:49:32 MSK 2022","Mon Jun 27 17:49:34 MSK 2022","2596","tests.regression_tests","payout_negative_test","","","","test_payout_with_invalid_csv_file_data[0-100]",""
+"passed","Mon Jun 27 17:49:24 MSK 2022","Mon Jun 27 17:49:26 MSK 2022","2559","tests.regression_tests","payout_negative_test","","","","test_payout_with_invalid_csv_file_data[4111111111111111-0]",""
+"failed","Mon Jun 27 17:49:56 MSK 2022","Mon Jun 27 17:50:19 MSK 2022","22662","tests.smoke_tests","payout_test","","","","test_payout_with_csv_file",""

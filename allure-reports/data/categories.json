@@ -1,0 +1,30 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: 'Confirm transaction' pop-up isn't present!",
+      "children" : [ {
+        "name" : "test_payout_with_csv_file",
+        "uid" : "22335923d74cf50c",
+        "parentUid" : "eb05bf44bfde3e4b7d4ce8019b9ac1fe",
+        "status" : "failed",
+        "time" : {
+          "start" : 1656341396802,
+          "stop" : 1656341419464,
+          "duration" : 22662
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 1,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "eb05bf44bfde3e4b7d4ce8019b9ac1fe"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ]
+}
