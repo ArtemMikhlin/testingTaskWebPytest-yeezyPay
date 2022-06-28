@@ -14,14 +14,16 @@ def test_payout_with_csv_file(browser, card_number=4111111111111111, amount=1100
     total_commission = round(amount * commission_percent / 100 + fix_commission)
     create_csv_file(card_number, amount, file)
 
+    payout_page = PayoutPageSteps(browser)
+    payout_page.check_payout_page_visible_after_authorization()
+
     burger_menu = BurgerMenuSteps(browser)
     burger_menu.open_main_menu_item()
 
     main_page = MainPageSteps(browser)
     actual_account_balance = main_page.get_account_balance(currency)
+    burger_menu.open_payout_menu_item()
 
-    payout_page = PayoutPageSteps(browser)
-    payout_page.open()
     payout_page.upload_file(file)
     payout_page.confirm_transaction(amount, commission_percent, total_commission)
     burger_menu = BurgerMenuSteps(browser)

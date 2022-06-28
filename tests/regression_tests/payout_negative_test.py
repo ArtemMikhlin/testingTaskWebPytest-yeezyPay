@@ -19,14 +19,16 @@ def test_payout_with_invalid_csv_file_data(browser, card_number, amount, currenc
                                            file="data/payout_files/payout_data_invalid_data.csv", ):
     create_csv_file(card_number, amount, file)
 
+    payout_page = PayoutPageSteps(browser)
+    payout_page.check_payout_page_visible_after_authorization()
+
     burger_menu = BurgerMenuSteps(browser)
     burger_menu.open_main_menu_item()
 
     main_page = MainPageSteps(browser)
     actual_account_balance = main_page.get_account_balance(currency)
+    burger_menu.open_payout_menu_item()
 
-    payout_page = PayoutPageSteps(browser)
-    payout_page.open()
     payout_page.upload_file(file)
     payout_page.cancel_transaction_with_invalid_data()
     burger_menu.open_main_menu_item()

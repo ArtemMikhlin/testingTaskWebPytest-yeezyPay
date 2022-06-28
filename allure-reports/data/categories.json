@@ -7,13 +7,13 @@
       "name" : "AssertionError: 'Confirm transaction' pop-up isn't present!",
       "children" : [ {
         "name" : "test_payout_with_csv_file",
-        "uid" : "22335923d74cf50c",
+        "uid" : "f3bbaf1dd91bf9bd",
         "parentUid" : "eb05bf44bfde3e4b7d4ce8019b9ac1fe",
         "status" : "failed",
         "time" : {
-          "start" : 1656341396802,
-          "stop" : 1656341419464,
-          "duration" : 22662
+          "start" : 1656402979144,
+          "stop" : 1656403001452,
+          "duration" : 22308
         },
         "flaky" : false,
         "newFailed" : false,

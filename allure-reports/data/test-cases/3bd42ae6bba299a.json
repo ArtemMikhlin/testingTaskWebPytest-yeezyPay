@@ -1,0 +1,233 @@
+{
+  "uid" : "3bd42ae6bba299a",
+  "name" : "test_payout_with_csv_file",
+  "fullName" : "tests.smoke_tests.payout_test#test_payout_with_csv_file",
+  "historyId" : "8ceacf2f30090822f1a3daf7d3eb96a2",
+  "time" : {
+    "start" : 1656402961934,
+    "stop" : 1656402974134,
+    "duration" : 12200
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: 'Yes' button isn't clickable!",
+  "statusTrace" : "browser = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"c28e28111b6ff5e2bb5c963eb3e950e2\")>, card_number = 4111111111111111, amount = 1100, commission_percent = 1, fix_commission = 40, currency = 'RUB'\nfile = 'data/payout_files/payout_data_accept_now.csv', status = 'Complete'\n\n    @pytest.mark.smoke\n    @pytest.mark.payout\n    def test_payout_with_csv_file(browser, card_number=4111111111111111, amount=1100, commission_percent=1,\n                                  fix_commission=40, currency=\"RUB\", file=\"data/payout_files/payout_data_accept_now.csv\",\n                                  status=\"Complete\"):\n        total_commission = round(amount * commission_percent / 100 + fix_commission)\n        create_csv_file(card_number, amount, file)\n    \n        payout_page = PayoutPageSteps(browser)\n        payout_page.check_payout_page_visible()\n    \n        burger_menu = BurgerMenuSteps(browser)\n        burger_menu.open_main_menu_item()\n    \n        main_page = MainPageSteps(browser)\n        actual_account_balance = main_page.get_account_balance(currency)\n        burger_menu.open_payout_menu_item()\n    \n        payout_page.upload_file(file)\n>       payout_page.confirm_transaction(amount, commission_percent, total_commission)\n\ntests\\smoke_tests\\payout_test.py:28: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages_steps\\payout_page_steps.py:28: in confirm_transaction\n    self.click_on_button_yes()\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <pages_steps.payout_page_steps.PayoutPageSteps object at 0x0000014171D183C8>\n\n    def click_on_button_yes(self):\n        assert self.check_element_clickable(10, *self.__BUTTON_YES) is True, \\\n>           \"'Yes' button isn't clickable!\"\nE       AssertionError: 'Yes' button isn't clickable!\n\npages\\payout_page.py:93: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ {
+    "name" : "browser",
+    "time" : {
+      "start" : 1656402959132,
+      "stop" : 1656402961933,
+      "duration" : 2801
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError: 'Yes' button isn't clickable!",
+    "statusTrace" : "browser = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"c28e28111b6ff5e2bb5c963eb3e950e2\")>, card_number = 4111111111111111, amount = 1100, commission_percent = 1, fix_commission = 40, currency = 'RUB'\nfile = 'data/payout_files/payout_data_accept_now.csv', status = 'Complete'\n\n    @pytest.mark.smoke\n    @pytest.mark.payout\n    def test_payout_with_csv_file(browser, card_number=4111111111111111, amount=1100, commission_percent=1,\n                                  fix_commission=40, currency=\"RUB\", file=\"data/payout_files/payout_data_accept_now.csv\",\n                                  status=\"Complete\"):\n        total_commission = round(amount * commission_percent / 100 + fix_commission)\n        create_csv_file(card_number, amount, file)\n    \n        payout_page = PayoutPageSteps(browser)\n        payout_page.check_payout_page_visible()\n    \n        burger_menu = BurgerMenuSteps(browser)\n        burger_menu.open_main_menu_item()\n    \n        main_page = MainPageSteps(browser)\n        actual_account_balance = main_page.get_account_balance(currency)\n        burger_menu.open_payout_menu_item()\n    \n        payout_page.upload_file(file)\n>       payout_page.confirm_transaction(amount, commission_percent, total_commission)\n\ntests\\smoke_tests\\payout_test.py:28: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages_steps\\payout_page_steps.py:28: in confirm_transaction\n    self.click_on_button_yes()\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <pages_steps.payout_page_steps.PayoutPageSteps object at 0x0000014171D183C8>\n\n    def click_on_button_yes(self):\n        assert self.check_element_clickable(10, *self.__BUTTON_YES) is True, \\\n>           \"'Yes' button isn't clickable!\"\nE       AssertionError: 'Yes' button isn't clickable!\n\npages\\payout_page.py:93: AssertionError",
+    "steps" : [ {
+      "name" : "create_csv_file",
+      "time" : {
+        "start" : 1656402961934,
+        "stop" : 1656402961935,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "card_number",
+        "value" : "4111111111111111"
+      }, {
+        "name" : "amount",
+        "value" : "1100"
+      }, {
+        "name" : "file_name",
+        "value" : "'data/payout_files/payout_data_accept_now.csv'"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "open_main_menu_item",
+      "time" : {
+        "start" : 1656402962592,
+        "stop" : 1656402962797,
+        "duration" : 205
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "get_account_balance",
+      "time" : {
+        "start" : 1656402962797,
+        "stop" : 1656402962833,
+        "duration" : 36
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "currency",
+        "value" : "'RUB'"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "open_payout_menu_item",
+      "time" : {
+        "start" : 1656402962833,
+        "stop" : 1656402962990,
+        "duration" : 157
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "upload_file",
+      "time" : {
+        "start" : 1656402962991,
+        "stop" : 1656402963305,
+        "duration" : 314
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "file",
+        "value" : "'data/payout_files/payout_data_accept_now.csv'"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "confirm_transaction",
+      "time" : {
+        "start" : 1656402963305,
+        "stop" : 1656402974133,
+        "duration" : 10828
+      },
+      "status" : "failed",
+      "statusMessage" : "AssertionError: 'Yes' button isn't clickable!\n",
+      "statusTrace" : "  File \"c:\\users\\mikhlin\\pycharmprojects\\yeezypaywebproject\\venv\\lib\\site-packages\\allure_commons\\_allure.py\", line 172, in impl\n    return func(*a, **kw)\n  File \"C:\\Users\\Mikhlin\\PycharmProjects\\yeezypayWebProject\\pages_steps\\payout_page_steps.py\", line 28, in confirm_transaction\n    self.click_on_button_yes()\n  File \"C:\\Users\\Mikhlin\\PycharmProjects\\yeezypayWebProject\\pages\\payout_page.py\", line 93, in click_on_button_yes\n    \"'Yes' button isn't clickable!\"\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "total_amount",
+        "value" : "1100"
+      }, {
+        "name" : "commission_percent",
+        "value" : "1"
+      }, {
+        "name" : "total_commission",
+        "value" : "51"
+      } ],
+      "shouldDisplayMessage" : true,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 0
+    } ],
+    "attachments" : [ {
+      "uid" : "e80645c05a6a94e2",
+      "name" : "screenshot",
+      "source" : "e80645c05a6a94e2.png",
+      "type" : "image/png",
+      "size" : 50911
+    }, {
+      "uid" : "b9e04cc481f8c9b5",
+      "name" : "log",
+      "source" : "b9e04cc481f8c9b5.txt",
+      "type" : "text/plain",
+      "size" : 380
+    } ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : true,
+    "attachmentsCount" : 2,
+    "hasContent" : true,
+    "stepsCount" : 6
+  },
+  "afterStages" : [ {
+    "name" : "browser::0",
+    "time" : {
+      "start" : 1656402974288,
+      "stop" : 1656402976525,
+      "duration" : 2237
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "payout"
+  }, {
+    "name" : "tag",
+    "value" : "smoke"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests.smoke_tests"
+  }, {
+    "name" : "suite",
+    "value" : "payout_test"
+  }, {
+    "name" : "host",
+    "value" : "Mikhlin-nb"
+  }, {
+    "name" : "thread",
+    "value" : "26300-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.smoke_tests.payout_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ "payout", "smoke" ]
+  },
+  "source" : "3bd42ae6bba299a.json",
+  "parameterValues" : [ ]
+}

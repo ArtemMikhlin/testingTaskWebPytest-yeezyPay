@@ -5,8 +5,10 @@ from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.wait import WebDriverWait
 import os
 import re
+import allure
 
 
+@allure.step("create_csv_file")
 def create_csv_file(card_number, amount, file_name):
 
     with open(file_name, "w") as file:

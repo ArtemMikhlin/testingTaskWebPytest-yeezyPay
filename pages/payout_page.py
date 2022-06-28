@@ -89,6 +89,6 @@ class PayoutPage(BaseMethods):
 
     # Pop - Up Payment canceled
     def click_on_button_yes(self):
-        assert self.check_element_clickable(5, *self.__BUTTON_YES) is True, \
+        assert self.check_element_clickable(10, *self.__BUTTON_YES) is True, \
             "'Yes' button isn't clickable!"
         self.click(*self.__BUTTON_YES)
