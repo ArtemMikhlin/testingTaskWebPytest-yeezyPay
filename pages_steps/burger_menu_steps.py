@@ -20,12 +20,12 @@ class BurgerMenuSteps(BurgerMenu, MainPage, HistoryPage, PayoutPage, ExchangePag
         self.click_on_item_history()
         self.check_history_page_visible()
 
-    @allure.step("open_main_menu_item")
-    def open_main_menu(self):
-        self.click_on_burger_menu()
-        self.check_menu_is_opening()
-        self.click_on_item_main()
-        self.check_main_page_visible()
+    # @allure.step("open_main_menu_item")
+    # def open_main_menu(self):
+    #     self.click_on_burger_menu()
+    #     self.check_menu_is_opening()
+    #     self.click_on_item_main()
+    #     self.check_main_page_visible()
 
     @allure.step("open_payout_menu_item")
     def open_payout_menu(self):

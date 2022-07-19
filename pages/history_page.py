@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 class HistoryPage(BaseMethods):
     __PAGE_URL = "https://my.stage.yeezypay.io/history"
 
-    __BUTTON_SEARCH = (By.CSS_SELECTOR, ".input-group-prepend")
+    __BUTTON_SEARCH = (By.CSS_SELECTOR, ".bi-search")
 
     __LABEL_DOWNLOAD = (By.CSS_SELECTOR, "[aria-label = 'cloud download fill']")
 
@@ -19,15 +19,15 @@ class HistoryPage(BaseMethods):
         self.open_page(self.__PAGE_URL)
 
     def check_history_page_visible(self):
-        assert self.wait_element_present(*self.__BUTTON_SEARCH) \
-               or self.wait_element_present(*self.__LABEL_DOWNLOAD) is True, "'History' page isn't present!"
+        assert self.wait_element_present(5, *self.__BUTTON_SEARCH) \
+               or self.wait_element_present(5, *self.__LABEL_DOWNLOAD) is True, "'History' page isn't present!"
 
     def get_progressbar_status(self, status):
         if status == "Waiting":
-            return self.wait_element_present(*self.__PROGRESSBAR_WAITING)
+            return self.wait_element_present(5, *self.__PROGRESSBAR_WAITING)
 
         elif status == "Cancel":
-            return self.wait_element_present(*self.__PROGRESSBAR_CANCEL)
+            return self.wait_element_present(5, *self.__PROGRESSBAR_CANCEL)
 
         elif status == "Complete":
-            return self.wait_element_present(*self.__PROGRESSBAR_COMPLETE)
+            return self.wait_element_present(5, *self.__PROGRESSBAR_COMPLETE)

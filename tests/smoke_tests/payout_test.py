@@ -31,7 +31,7 @@ def test_payout_with_csv_file(browser, card_number=4111111111111111, amount=1100
 
     history_page = HistoryPageSteps(browser)
     history_page.check_progressbar_status(status)
-    burger_menu.open_main_page()
+    # burger_menu.open_main_page()
 
     # actual_account_balance_after_transaction = round(main_page.get_account_balance(currency))
     # account_balance = round(actual_account_balance - amount + total_commission)

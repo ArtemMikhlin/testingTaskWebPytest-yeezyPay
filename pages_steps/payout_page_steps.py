@@ -25,8 +25,6 @@ class PayoutPageSteps(PayoutPage):
         self.check_pop_up_visible()
         self.check_data_from_pop_up(total_amount, commission_percent, total_commission)
         self.click_on_button_confirm()
-        self.click_on_button_yes()
-        self.click_on_button_create_new_payment()
 
     @allure.step("cancel_transaction_with_invalid_data")
     def cancel_transaction_with_invalid_data(self):
