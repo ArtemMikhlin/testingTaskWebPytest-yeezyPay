@@ -16,7 +16,7 @@ import pytest
     ]
 )
 def test_payout_with_csv_file(browser, card_number, status, amount=1100, commission_percent=1,
-                              fix_commission=40, currency="RUB", file="data/payout_files/payout_data_accept_now.csv"):
+                              fix_commission=40, currency="RUB", file="data/payout_files/payout_valid_data.csv"):
     browser.get(update_authorization_link()["authlink"])
     total_commission = round(amount * commission_percent / 100 + fix_commission)
     create_csv_file(card_number, amount, file)
