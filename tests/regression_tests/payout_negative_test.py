@@ -1,7 +1,7 @@
 from pages_steps.payout_page_steps import PayoutPageSteps
 from pages_steps.burger_menu_steps import BurgerMenuSteps
 from pages_steps.main_page_steps import MainPageSteps
-from base_methods import create_csv_file
+from base_methods import create_csv_file, update_authorization_link
 import pytest
 
 
@@ -17,6 +17,7 @@ import pytest
 )
 def test_payout_with_invalid_csv_file_data(browser, card_number, amount, currency="RUB",
                                            file="data/payout_files/payout_data_invalid_data.csv", ):
+    browser.get(update_authorization_link()["authlink"])
     create_csv_file(card_number, amount, file)
 
     payout_page = PayoutPageSteps(browser)
