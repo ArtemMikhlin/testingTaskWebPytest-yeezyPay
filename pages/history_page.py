@@ -23,11 +23,11 @@ class HistoryPage(BaseMethods):
                or self.wait_element_present(5, *self.__LABEL_DOWNLOAD) is True, "'History' page isn't present!"
 
     def get_progressbar_status(self, status):
-        if status == "Waiting":
+        if status == "WAITING":
             return self.wait_element_present(5, *self.__PROGRESSBAR_WAITING)
 
-        elif status == "Cancel":
+        elif status == "FAILED":
             return self.wait_element_present(5, *self.__PROGRESSBAR_CANCEL)
 
-        elif status == "Complete":
+        elif status == "COMPLETE":
             return self.wait_element_present(5, *self.__PROGRESSBAR_COMPLETE)

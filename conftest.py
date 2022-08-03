@@ -5,7 +5,7 @@ import allure
 
 
 @pytest.fixture(scope="function")
-def browser(auth_url="https://my.stage.yeezypay.io/auth/WzI3LCAiYjh0NDdhLTZjNTNlYTYzZTEzZDk2N2FjODk0ZGNlZTQzNTM1MTRjIl0="):
+def browser():
     options = webdriver.ChromeOptions()
     options.add_experimental_option('excludeSwitches', ['enable-logging'])
 
@@ -13,7 +13,6 @@ def browser(auth_url="https://my.stage.yeezypay.io/auth/WzI3LCAiYjh0NDdhLTZjNTNl
     browser = webdriver.Chrome(ChromeDriverManager().install(), options=options)
     browser.implicitly_wait(10)
     browser.set_page_load_timeout(5)
-    browser.get(auth_url)
     print("\nstart browser for test..")
     yield browser
     browser.quit()
